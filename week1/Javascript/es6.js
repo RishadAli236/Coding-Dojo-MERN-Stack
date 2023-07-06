@@ -45,4 +45,4 @@ const person = {
     createdAt: 1543945177623
 };
 const { addresses  :[{city : Washington}, sherlock]} = person;
-console.log(Washington)
+console.log(addresses)
