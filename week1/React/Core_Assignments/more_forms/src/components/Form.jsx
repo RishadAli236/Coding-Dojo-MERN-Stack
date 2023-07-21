@@ -15,7 +15,7 @@ function Form () {
 
     const handleFirstName = (e) => {
         setFirstName(e.target.value);
-        if (e.target.value.length < 2){
+        if (e.target.value.length > 0 && e.target.value.length < 2){
             setFirstNameErr("First Name should be at least 2 characters");
         }
         else{
@@ -24,7 +24,7 @@ function Form () {
     }
     const handleLastName = (e) => {
         setLastName(e.target.value);
-        if (e.target.value.length < 2){
+        if (e.target.value.length > 0 && e.target.value.length < 2){
             setLastNameErr("Last Name should be at least 2 characters");
         }
         else{
@@ -33,7 +33,7 @@ function Form () {
     }
     const handleEmail = (e) => {
         setEmail(e.target.value);
-        if (e.target.value.length < 5){
+        if (e.target.value.length > 0 && e.target.value.length < 5){
             setEmailErr("Email should be at least 5 characters");
         }
         else{
@@ -42,7 +42,7 @@ function Form () {
     }
     const handlePassword = (e) => {
         setPassword(e.target.value);
-        if (e.target.value.length < 8){
+        if (e.target.value.length > 0 && e.target.value.length < 8){
             setPasswordErr("Password must be at least 8 characters");
         }
         else{
@@ -51,7 +51,7 @@ function Form () {
     }
     const handleConfirmPassword= (e) => {
         setConfirmPassword(e.target.value);
-        if (e.target.value != password){
+        if (e.target.value.length > 0 && e.target.value != password){
             setConfirmPasswordErr("Passwords must match");
         }
         else{
