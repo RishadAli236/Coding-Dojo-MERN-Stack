@@ -1,4 +1,5 @@
 import './App.css'
+import Person from './components/Person'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <li>Run a marathon</li>
         <li>Feed the dogs</li>
       </ul>
+      <Person/>
     </>
   )
 }

@@ -12,6 +12,7 @@ function Form () {
 
     const createPerson = (e) => {
         e.preventDefault();
+        console.log(e)
         setHasBeenSubmitted(true);
     }
 
@@ -30,20 +31,20 @@ function Form () {
         }
     }
 
-    const firstNameError = () => {
-        if (firstName.length < 1){
-            return "First name is required"
+    // const firstNameError = () => {
+    //     if (firstName.length < 1){
+    //         return "First name is required"
             
-        }
-        else if (firstName.length < 3){
-            return "First should have at least 3 charachters"
+    //     }
+    //     else if (firstName.length < 3){
+    //         return "First should have at least 3 charachters"
             
-        }
-        else {
-            return ""
+    //     }
+    //     else {
+    //         return ""
             
-        }
-    }
+    //     }
+    // }
 
     // const formMessage = () => {
     //     if (hasBeenSubmitted){
@@ -65,7 +66,7 @@ function Form () {
                 <div>
                     <label htmlFor="firstName">First Name</label>
                     {/* <input type="text" onChange={ (e) => setFirstName(e.target.value) }/> */}
-                    <input type="text" onChange={ handleFirstName }/>
+                    <input type="text" name="firstName" onChange={ handleFirstName }/>
                     { firstNameErr?
                         <p>{firstNameErr}</p>
                     :
