@@ -33,8 +33,6 @@ const createCompany = () => {
     return fakeCompany;
 }
 
-console.log(createCompany());
-
 app.get("/api/users/new", (request, response) => {
     const newUser = createUser();
     console.log(newUser);
